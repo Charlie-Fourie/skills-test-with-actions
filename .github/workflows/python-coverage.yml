@@ -19,7 +19,7 @@ jobs:
             - name: Set up Python
               uses: actions/setup-python@v4
               with: 
-                python-vversion: 3.13
+                python-version: 3.13
 
             - name: Install dependencies
               run: |
@@ -32,7 +32,7 @@ jobs:
               run: pytest --cov=src
 
             - name: Coverage comment
-              uses: py-cov-action/pyton-coverage-comment=action@v3
+              uses: py-cov-action/python-coverage-comment@v3
               with:
                 GITHUB_TOKEN: ${{ github.token }}
                 MINIMUM_GREEN: 90
